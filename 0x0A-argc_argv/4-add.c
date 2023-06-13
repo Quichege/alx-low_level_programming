@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 /**
- * check_num - check digits within the string
+ * check_num - check -string there are digit
  * @str: array str
  *
  * Return: 0 (success)
@@ -14,8 +14,7 @@ int check_num(char *str)
 	unsigned int count;
 
 	count = 0;
-
-	while (count < strlen(sstr))/**count string*/
+	while (count < strlen(str))/**count string*/
 
 	{
 		if (!isdigit(str[count])) /*check if str has digits*/
@@ -33,7 +32,7 @@ int check_num(char *str)
  * @argc: number of arguments
  * @argv: Arguments
  *
- * Return: 0 (success)
+ * Return: Always 0 (success)
  */
 int main(int argc, char *argv[])
 {
@@ -43,24 +42,26 @@ int main(int argc, char *argv[])
 	int sum = 0;
 
 	count = 1;
-
-	while (count < argc)
+	while (count < argc)/* Goes through the whole array*/
 	{
-		if (check_num(aargv[count]))
+		if (check_num(argv[count]))
 		{
-			str_to_int = atoi(argv[count]);
-			su, += str_to_int;
+			str_to_int = atoi(argv[count]);/*ATOI--> convert string to int*/
+			sum += str_to_int;
 		}
+
+		/*Condition if one of the number contains symbols that are not digits*/
+
 		else
 		{
 			printf("Error\n");
 			return (1);
 		}
 
-		count++
+		count++;
 	}
 
-	printf("%d\n", sum);
+	printf("%d\n", sum);/*print sum*/
 
 	return (0);
 }

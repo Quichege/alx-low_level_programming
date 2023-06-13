@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num = atoi(aargv[1]);
+	num = atoi(argv[1]);
 	result = 0;
 
 	if (num < 0)
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
 	for (j = 0; j < 5 && num >= 0; j++)
 	{
-		while (num >= ccoins[j])
+		while (num >= coins[j])
 		{
 			result++;
 			num -= coins[j];
