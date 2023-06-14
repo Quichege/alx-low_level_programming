@@ -2,10 +2,10 @@
 #include <stddef.h>
 /**
  * _strchr - entry point
- * s: input
- * c:input
+ * @s: input
+ * @c: input
  *
- * Return: 0 (success)
+ * Return: Always 0 (success)
  */
 char *_strchr(char *s, char c)
 {

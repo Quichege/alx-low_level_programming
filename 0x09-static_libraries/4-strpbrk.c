@@ -4,7 +4,7 @@
  * @s: input
  * @accept: input
  *
- * Return: 0 (success)
+ * Return: Always 0 (success)
  */
 char *_strpbrk(char *s, char *accept)
 {
